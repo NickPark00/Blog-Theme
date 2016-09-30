@@ -1,0 +1,191 @@
+@import "https://fonts.googleapis.com/css?family=Source+Code+Pro:200,500";
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: translateZ(200px);
+    transform: translateZ(200px);
+    opacity: 1;
+  }
+}
+@keyframes move {
+  from {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: translateZ(200px);
+    transform: translateZ(200px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+*::-moz-selection {
+  background: #16ccde;
+  color: white;
+}
+
+*::selection {
+  background: #16ccde;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  -webkit-perspective: 440px;
+          perspective: 440px;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+.container h1, .container p, .container a {
+  margin: 0;
+  padding: 0;
+  font-family: Source Code Pro;
+  font-weight: 300;
+  color: #2e363e;
+}
+.container img {
+  width: 10%;
+}
+.container .title {
+  margin-bottom: 10px;
+  font-family: Source Code Pro;
+  font-size: 32px;
+  font-weight: 300;
+}
+.container .descr {
+  font-size: 18px;
+}
+.container a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+.container a:hover:before {
+  top: -4px;
+}
+.container a:before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  opacity: 0.4;
+  background-color: currentColor;
+  -webkit-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.container .design:before {
+  background-color: #ea4c89;
+}
+.container .design:hover {
+  color: #ea4c89;
+  opacity: 1;
+  font-weight: 500;
+}
+.container .code:before {
+  background-color: #000;
+}
+.container .code:hover {
+  color: #000;
+  opacity: 1;
+  font-weight: 500;
+}
+.container .anythingelse:before {
+  background-color: #55acee;
+}
+.container .anythingelse:hover {
+  color: #55acee;
+  opacity: 1;
+  font-weight: 500;
+}
+
+.stars-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  box-shadow: 1489px 868px #333, 330px 419px #000, 1377px 341px #000, 1434px 590px #000, 1634px 161px #000, 662px 243px #000, 30px 45px #000, 1024px 826px #000, 315px 520px #000, 383px 698px #000, 1556px 895px #000, 618px 283px #000, 210px 968px #000, 1253px 754px #000, 930px 947px #000, 481px 414px #000, 1251px 489px #000, 402px 393px #000, 1286px 276px #000, 406px 404px #000, 1719px 844px #000, 1056px 256px #000, 502px 558px #000, 361px 111px #000, 1369px 948px #000, 1791px 114px #000, 1833px 41px #000, 1208px 295px #000, 562px 697px #000, 905px 723px #000, 1532px 902px #000, 1356px 303px #000, 1166px 626px #000, 924px 203px #000, 67px 183px #000, 795px 788px #000, 531px 828px #000, 515px 612px #000, 1620px 399px #000, 1498px 103px #000, 998px 668px #000, 825px 684px #000, 908px 803px #000, 1225px 154px #000, 945px 966px #000, 154px 302px #000, 1590px 806px #000, 459px 444px #000, 1196px 569px #000, 682px 172px #000, 1703px 150px #000, 736px 51px #000, 365px 756px #000, 502px 14px #000, 863px 334px #000, 844px 508px #000, 1303px 477px #000, 1522px 287px #000, 1224px 985px #000, 1023px 169px #000, 265px 572px #000, 609px 873px #000, 567px 966px #000, 770px 965px #000, 1424px 453px #000, 1111px 580px #000, 1819px 901px #000, 492px 505px #000, 31px 414px #000, 1469px 970px #000, 100px 739px #000, 1225px 17px #000, 548px 279px #000, 752px 40px #000, 1176px 313px #000, 1575px 761px #000, 561px 681px #000, 583px 135px #000, 987px 209px #000, 1299px 315px #000, 722px 119px #000, 934px 741px #000, 820px 409px #000, 450px 388px #000, 1662px 844px #000, 725px 755px #000, 1356px 117px #000, 574px 864px #000, 1144px 917px #000, 1126px 489px #000, 245px 948px #000, 646px 729px #000, 505px 195px #000, 1368px 285px #000, 808px 235px #000, 1626px 331px #000, 667px 28px #000, 256px 635px #000, 1650px 163px #000, 1736px 817px #000, 1465px 823px #000, 1590px 137px #000, 77px 155px #000, 118px 300px #000, 437px 391px #000, 239px 573px #000, 751px 995px #000, 1264px 692px #000, 1099px 586px #000, 297px 895px #000, 1000px 907px #000, 1548px 233px #000, 1259px 1px #000, 1064px 233px #000, 933px 496px #000, 920px 609px #000, 387px 475px #000, 1770px 526px #000, 921px 220px #000, 657px 750px #000, 1643px 687px #000, 1004px 892px #000, 848px 843px #000, 1351px 265px #000, 664px 790px #000, 185px 186px #000, 1092px 104px #000, 543px 90px #000, 755px 808px #000, 1008px 625px #000, 53px 121px #000, 1419px 159px #000, 110px 323px #000, 1235px 392px #000, 1113px 29px #000, 1573px 449px #000, 1778px 6px #000, 1379px 462px #000, 639px 501px #000, 1786px 58px #000, 625px 837px #000, 403px 50px #000, 302px 268px #000, 1381px 941px #000, 1463px 350px #000, 619px 560px #000, 666px 626px #000, 1141px 333px #000, 334px 505px #000, 1212px 56px #000, 969px 917px #000, 1157px 689px #000, 80px 404px #000, 1208px 656px #000, 789px 713px #000, 1330px 973px #000, 1590px 722px #000, 1669px 570px #000, 1028px 684px #000, 1471px 905px #000, 726px 2px #000, 1548px 763px #000, 580px 537px #000, 411px 597px #000, 1794px 842px #000, 743px 212px #000, 1156px 275px #000, 158px 900px #000, 263px 434px #000, 453px 866px #000, 1041px 87px #000, 533px 115px #000, 1665px 54px #000, 346px 526px #000, 1660px 6px #000, 837px 54px #000, 1360px 221px #000, 639px 589px #000, 200px 324px #000, 723px 537px #000, 1303px 46px #000, 1358px 120px #000, 845px 720px #000, 1749px 528px #000, 1447px 10px #000, 1094px 218px #000, 30px 331px #000, 126px 544px #000, 99px 824px #000, 122px 160px #000, 526px 520px #000, 305px 106px #000, 1745px 779px #000, 259px 412px #000, 1077px 454px #000, 233px 605px #000, 698px 23px #000, 364px 496px #000, 988px 750px #000, 752px 69px #000, 54px 949px #000;
+  -webkit-animation: move 5s linear infinite;
+          animation: move 5s linear infinite;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  z-index: -100;
+}
+.stars-background:before, .stars-background:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  box-shadow: inherit;
+}
+.stars-background:before {
+  -webkit-transform: translateZ(-200px);
+  transform: translateZ(-200px);
+  opacity: 0.6;
+}
+.stars-background:after {
+  -webkit-transform: translateZ(-400px);
+  transform: translateZ(-400px);
+  opacity: 0.4;
+}
+
+@media (max-width: 600px) {
+  .container img {
+    width: 25%;
+  }
+}
+
